@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="ニットのほつれや穴あきのお直しはre:knitへお任せください">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="./images/favicon.png" type="image/vnd.microsoft.icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4d60fe16e7.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <title>ニットのお直しならre:knit</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <div class="header-title">
+                <h2>r e : K n i t</h2>
+            </div>
+            <ul class="header-nav" id="nav">
+                <li class="nav-item"><a href="#service">Service</a></li>
+                <li class="nav-item"><a href="#works">Works</a></li>
+                <li class="nav-item"><a href="#about">About</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+            <div id="hamburger">
+                <span class="line" id="line1"></span>
+                <span class="line" id="line2"></span>
+                <span class="line" id="line3"></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-main">
+        <div class="main-container">
+            <h1>ニットのお直しなら<br><span>r e : K n i t</span></h1>
+        </div>
+    </section>
+
+    <section class="page-service" id="service">
+        <div class="service-container">
+
+            <div class="service-text">
+                <h2 class="section-title">Service</h2>
+                <p class="section-text">あなたのニットを丁寧に修理いたします</p>
+            </div>
+
+            <div class="service-wrapper">
+                <div class="service-item">
+                    <h3>穴あき</h3>
+                    <p>虫食い、焦げ跡などで穴が空いてしまったニットを編み直すことで元の状態に近づけます</p>
+                </div>
+                <div class="service-item">
+                    <h3>ほつれ</h3>
+                    <p>糸を引っ掛けて引きつれが起きた箇所を元の網目に沿って戻していきます</p>
+                </div>
+                <div class="service-item">
+                    <h3>サイズ直し</h3>
+                    <p>お客様のお体にあったサイズへ袖丈や着丈を調整いたします</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="page-works" id="works">
+        <div class="works-container">
+
+            <div class="works-text">
+                <h2 class="section-title">Works</h2>
+                <p class="section-text">お直ししたニットの一例</p>
+            </div>
+
+            <div class="works-wrapper">
+
+                <div class="works-item">
+                    <button class="modal__show" data-modal-link="modal-1"><img src="./images/knit1-before.jpeg"
+                            alt="ニットの写真"></button>
+                    <p>写真をクリック</p>
+                </div>
+                <div class="modal modal-1">
+                    <div class="modal__inner">
+                        <div id="modal__close" class="modal__close"><i class="fas fa-times"></i></div>
+                        <img src="./images/knit1-after.jpeg">
+                        <p>複雑な編み方のニットを同じ網目に見えるように編み直しました</p>
+                    </div>
+                    <div id="modal__background" class="modal__background"></div>
+                </div>
+
+                <div class="works-item">
+                    <button class="modal__show" data-modal-link="modal-2"><img src="./images/knit2-before.jpeg"
+                            alt="ニットの写真"></button>
+                    <p>写真をクリック</p>
+                </div>
+                <div class="modal modal-2">
+                    <div class="modal__inner">
+                        <div id="modal__close" class="modal__close"><i class="fas fa-times"></i></div>
+                        <img src="./images/knit2-after.jpeg">
+                        <p>元の生地に馴染むように縫って穴を閉じました</p>
+                    </div>
+                    <div id="modal__background" class="modal__background"></div>
+                </div>
+
+                <div class="works-item">
+                    <button class="modal__show" data-modal-link="modal-3"><img src="./images/knit3-before.jpeg"
+                            alt="ニットの写真"></button>
+                    <p>写真をクリック</p>
+                </div>
+                <div class="modal modal-3">
+                    <div class="modal__inner">
+                        <div id="modal__close" class="modal__close"><i class="fas fa-times"></i></div>
+                        <img src="./images/knit3-after.jpeg">
+                        <p>脇の部分のパーツを同じ糸でつなぎ直しました</p>
+                    </div>
+                    <div id="modal__background" class="modal__background"></div>
+                </div>
+
+                <div class="works-item">
+                    <button class="modal__show" data-modal-link="modal-4"><img src="./images/knit4-before.jpeg"
+                            alt="ニットの写真"></button>
+                    <p>写真をクリック</p>
+                </div>
+                <div class="modal modal-4">
+                    <div class="modal__inner">
+                        <div id="modal__close" class="modal__close"><i class="fas fa-times"></i></div>
+                        <img src="./images/knit4-after.jpeg">
+                        <p>ほどけていた目を編み直しました</p>
+                    </div>
+                    <div id="modal__background" class="modal__background"></div>
+                </div>
+
+                <div class="works-item hide">
+                    <button class="modal__show" data-modal-link="modal-5"><img src="./images/knit5-before.jpeg"
+                            alt="ニットの写真"></button>
+                    <p>写真をクリック</p>
+                </div>
+                <div class="modal modal-5">
+                    <div class="modal__inner">
+                        <div id="modal__close" class="modal__close"><i class="fas fa-times"></i></div>
+                        <img src="./images/knit5-after.jpeg">
+                        <p>2本取りの糸が1本切れていたため2本で編み直しました</p>
+                    </div>
+                    <div id="modal__background" class="modal__background"></div>
+                </div>
+
+                <div class="works-item hide">
+                    <button class="modal__show" data-modal-link="modal-6"><img src="./images/knit6-before.jpeg"
+                            alt="ニットの写真"></button>
+                    <p>写真をクリック</p>
+                </div>
+                <div class="modal modal-6">
+                    <div class="modal__inner">
+                        <div id="modal__close" class="modal__close"><i class="fas fa-times"></i></div>
+                        <img src="./images/knit6-after.jpeg">
+                        <p>糸が切れてできたほつれを直しました</p>
+                    </div>
+                    <div id="modal__background" class="modal__background"></div>
+                </div>
+
+                <div class="works-item hide">
+                    <button class="modal__show" data-modal-link="modal-7"><img src="./images/knit7-before.jpeg"
+                            alt="ニットの写真"></button>
+                    <p>写真をクリック</p>
+                </div>
+                <div class="modal modal-7">
+                    <div class="modal__inner">
+                        <div id="modal__close" class="modal__close"><i class="fas fa-times"></i></div>
+                        <img src="./images/knit7-after.jpeg">
+                        <p>糸が切れてできたほつれを直しました</p>
+                    </div>
+                    <div id="modal__background" class="modal__background"></div>
+                </div>
+
+                <div class="works-item hide">
+                    <button class="modal__show" data-modal-link="modal-8"><img src="./images/knit8-before.jpeg"
+                            alt="ニットの写真"></button>
+                    <p>写真をクリック</p>
+                </div>
+                <div class="modal modal-8">
+                    <div class="modal__inner">
+                        <div id="modal__close" class="modal__close"><i class="fas fa-times"></i></div>
+                        <img src="./images/knit8-after.jpeg">
+                        <p>引っ掛けて出てきた糸を元の網目に戻しました</p>
+                    </div>
+                    <div id="modal__background" class="modal__background"></div>
+                </div>
+
+                <div class="works-item hide">
+                    <button class="modal__show" data-modal-link="modal-9"><img src="./images/knit9-before.jpeg"
+                            alt="ニットの写真"></button>
+                    <p>写真をクリック</p>
+                </div>
+                <div class="modal modal-9">
+                    <div class="modal__inner">
+                        <div id="modal__close" class="modal__close"><i class="fas fa-times"></i></div>
+                        <img src="./images/knit9-after.jpeg">
+                        <p>引っ掛けて出てきた糸を元の網目に戻しました</p>
+                    </div>
+                    <div id="modal__background" class="modal__background"></div>
+                </div>
+
+                <div class="works-item hide">
+                    <button class="modal__show" data-modal-link="modal-10"><img src="./images/sode1-before.jpeg"
+                            alt="ニットの写真"></button>
+                    <p>写真をクリック</p>
+                </div>
+                <div class="modal modal-10">
+                    <div class="modal__inner">
+                        <div id="modal__close" class="modal__close"><i class="fas fa-times"></i></div>
+                        <img src="./images/sode1-after.jpeg">
+                        <p>袖のつなぎ目がほどけていたので編み直しました</p>
+                    </div>
+                    <div id="modal__background" class="modal__background"></div>
+                </div>
+            </div>
+
+            <div class="works-btn">
+                <button class="btn more-btn">もっと見る</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="page-about" id="about">
+        <div class="about-container">
+
+            <div class="about-text">
+                <h2 class="section-title">About</h2>
+                <p class="section-text"></p>
+            </div>
+
+            <div class="about-content">
+                <img class="content-item" src="./images/profile.jpeg" alt="プロフィール写真">
+                <div class="text-wrapper content-item"> 
+                    <div class="text-item">
+                        <h3>プロフィール</h3>
+                        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    </div> 
+                    <div class="text-item">
+                        <h3>経歴</h3>
+                        <p>ニットの専門学校卒業後、繊維メーカーで製品の企画担当を経て現在に至ります。</p>
+                    </div>
+                    <div class="text-item">
+                        <h3>想い</h3>
+                        <p>ニットが出来上がるまでに想像以上の時間や材料が投じられていることを
+                            現場を通して実感。
+                            そんな想いの詰まったニットを少しでも
+                            長く来ていただけるようにお手伝いいたします。</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="page-contact" id="contact">
+        <div class="contact-container">
+
+            <div class="contact-text">
+                <h2 class="section-title">Contact</h2>
+                <p class="section-text">ニットでお困りの方はお気軽にお問い合わせください</p>
+            </div>
+
+            <div class="contact-form">
+                <form id="form" class="form" action="#">
+                    <p>
+                        <label for="question1">お名前</label><br>
+                        <input type="text" name="question1" id="question1" placeholder="お名前" required>
+                    </p>
+                    <p>
+                        <label for="question2">メールアドレス</label><br>
+                        <input type="email" name="question2" id="question2" placeholder="メールアドレス" required>
+                    </p>
+                    <p>
+                        <label for="question3">画像を添付</label><br>
+                        <input type="file" name="file-208" size="40" class="wpcf7-form-control wpcf7-file img" id="img"
+                            accept=".gif,.png,.jpg,.jpeg" aria-invalid="false">
+                    </p>
+                    <p>
+                        <label for="question4">メッセージ本文</label><br>
+                        <textarea name="問い合わせ" class="form-textarea"></textarea>
+                    </p>
+                </form>
+                <div class="contact-send">
+                    <button class="btn"><a href="#">送信</a></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <ul class="footer-nav">
+                <li class="nav-item"><a href="#about">About</a></li>
+                <li class="nav-item"><a href="#works">Works</a></li>
+                <li class="nav-item"><a href="#service">Service</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="copyright">
+                <p>Copyright (C) 2021 Yoshiwo. All right reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+
+</html>

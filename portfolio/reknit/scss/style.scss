@@ -1,0 +1,594 @@
+@charset "utf-8";
+
+// カラー
+$base-color: #2f2f2f;
+$main-color: whitesmoke;
+
+$black: #333;
+$white: #fff;
+
+// ロゴ風フォント
+$english: "Patrick Hand", cursive;
+
+// メディアクエリ用
+$sp: 768px;
+
+@mixin sp {
+    @media (max-width: ($sp)) {
+        @content;
+    }
+}
+
+// ページ全体の設定
+html *,
+::before,
+::after {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+// フォント
+html {
+    font-size: 14px;
+}
+@include sp() {
+    html {
+        font-size: 12px;
+    }
+}
+body {
+    font-family: "Kiwi Maru", serif;
+    font-weight: 400;
+    line-height: 1.5;
+}
+h1,
+h2,
+h3,
+h4,
+strong {
+    font-weight: 700;
+}
+
+// 左右のパディング幅
+footer,
+section,
+header {
+    padding-left: 4%;
+    padding-right: 4%;
+    max-width: 100%;
+}
+
+// ベースのリンクカラー
+a {
+    color: $black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+// リストの黒丸なし
+li {
+    list-style: none;
+}
+
+// レスポンシブイメージと画像下スペース防止
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom; 
+    // 画像下のスペースを消す
+}
+
+// ボタンの装飾
+.btn {
+    padding: 20px 50px;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    background-color: $white;
+    cursor: pointer;
+}
+
+// ヘッダーはじめ
+.header {
+    background-color: $main-color;
+}
+.header-container {
+    max-width: 1400px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+
+    @include sp() {
+        height: 60px;
+    }
+}
+.header-title {
+    font-size: 3rem;
+    font-family: $english;
+    margin: auto 0;
+
+    @include sp() {
+        font-size: 1.5rem;
+        margin: auto 0;
+    }
+}
+.header-nav {
+    display: flex;
+    margin: auto 0 auto auto;
+    font-size: 1.25rem;
+    
+    @include sp() {
+        // ハンバーガーメニュー
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: 40%;
+        right: 0;
+        top: 0;
+        padding: 30px 0;
+        background: rgba(107, 93, 93, 1);
+        transition: 0.7s;
+        font-size: 1.5rem;
+        opacity: 0;
+    }
+    .nav-item {
+        margin-left: 30px;
+
+        @include sp() {
+            margin: auto;
+        }
+        a {
+            position: relative;
+
+            @include sp() {
+                color: $white;
+            }
+            &:hover {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 100%;
+                    height: 2px;
+                    background-color: $black;
+                }
+            }
+        }
+    }
+}
+// ハンバーガーメニューの位置、大きさ
+// クリック時のラインの変化
+#hamburger {
+    position: absolute;
+    display: none;
+    width: 30px;
+    height: 23px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+
+    @include sp() {
+        display: inline-block;
+    }
+    .line {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 30px;
+        height: 3px;
+        background-color: #000000;
+        transition: 1s;
+        border-radius: 4px;
+    }
+
+    #line1 {
+        top: 0;
+    }
+    #line2 {
+        top: 10px;
+    }
+    #line3 {
+        bottom: 0px;
+    }
+}
+.in {
+    opacity: 1;
+}
+.line_1,
+.line_2,
+.line_3 {
+    background: #000000;
+}
+.line_1 {
+    transform: translateY(10px) rotate(-45deg);
+    top: 0;
+}
+.line_2 {
+    opacity: 0;
+}
+.line_3 {
+    transform: translateY(-10px) rotate(45deg);
+    bottom: 0;
+}
+// ヘッダーおわり
+
+// メインビジュアルはじめ
+.page-main {
+    background: url(../images/main-visual2.jpg);
+    background-size: cover;
+    height: auto;
+}
+.main-container {
+    text-align: center;
+    padding: 200px 0;
+
+    @include sp() {
+        padding: 100px 0;
+    }
+    h1 {
+        line-height: 1.2;
+        font-size: 4rem;
+        @include sp() {
+            font-size: 2rem;
+        }
+        span {
+            font-size: 7rem;
+            font-family: $english;
+            @include sp() {
+                font-size: 4rem;
+            }
+        }
+    }
+    p {
+        font-size: 2rem;
+    }
+}
+// メインビジュアルはおわり
+
+// 各セクションの共通テキスト
+.section-title {
+    font-size: 3rem;
+    color: $black;
+    padding-bottom: 40px;
+}
+.section-text {
+    font-size: 1.5rem;
+}
+
+// serviceセクションはじめ
+.page-service {
+    background-color: $main-color;
+}
+.service-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 0;
+
+    @include sp() {
+        padding: 50px 0;
+    }
+}
+.service-text {
+    text-align: center;
+}
+.service-wrapper {
+    padding: 100px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
+    grid-auto-rows: minmax(100px, auto);
+
+    @include sp() {
+        display: block;
+        padding: 50px 0 0 0;
+    }
+}
+.service-item {
+    text-align: center;
+    border: 1px solid $black;
+    border-radius: 20px;
+    padding: 30px;
+
+    @include sp() {
+        margin-bottom: 30px;
+    }
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+}
+// serviceセクションおわり
+
+// worksセクションはじめ
+.page-works {
+    background: url(../images/back-visual4.jpg);
+    background-color: rgba(255, 255, 255, 0.6);
+    background-blend-mode: lighten;
+    background-size: cover;
+}
+.works-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 0 0 0;
+}
+.works-text {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.works-wrapper {
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+
+    @include sp() {
+        display: block;
+    }
+}
+
+.works-item {
+    text-align: center;
+    height: auto;
+    margin-bottom: 30px;
+
+    @include sp() {
+        height: auto;
+        margin-bottom: 20px;
+    }
+    button {
+        background: none;
+        border: none;
+        cursor: pointer;
+
+        img {
+            width: 65%;
+            border-radius: 30%;
+            border: solid 2px antiquewhite;
+            transition: all 0.5s ease;
+            &:hover {
+                opacity: 0.7;
+            }
+            @include sp() {
+                width: 70%;
+            }
+        }
+    }
+    p {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin: 0 auto;
+        padding-top: 10px;
+        width: 50%;
+    }
+}
+
+// worksセクション：モーダル部分
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.6s;
+    &.is-show {
+        opacity: 1;
+        visibility: visible;
+    }
+    &__inner {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        max-width: 500px;
+        padding: 50px 50px 20px 50px;
+        background-color: #fff;
+        z-index: 2;
+        @include sp() {
+            padding: 20px;
+        }
+        img {
+            width: 100%;
+            border-radius: 30%;
+        }
+        p{
+            text-align: center;
+            font-size: 1.25rem;
+            padding-top: 4%;
+        }
+    }
+    &__close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        cursor: pointer;
+        & i {
+            font-size: 40px;
+            color: #333;
+            @include sp() {
+                font-size: 20px;
+            }
+        }
+    }
+    &__background {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+        cursor: pointer;
+    }
+}
+.hide {
+    display: none;
+}
+.works-btn {
+    text-align: center;
+    padding-bottom: 50px;
+}
+// worksセクションおわり
+
+// aboutセクションはじめ
+.page-about {
+    background-color: $main-color;
+}
+.about-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 0;
+
+    @include sp() {
+        padding: 50px 0 0 0;
+    }
+}
+.about-text {
+    text-align: center;
+}
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+
+    @include sp() {
+        display: block;
+    }
+    .content-item {
+        width: 45%;
+        @include sp() {
+            width: 100%;
+        }
+    }
+    .text-wrapper {
+        margin-left: 20px;
+        @include sp() {
+            margin: 20px 0;
+            text-align: center;
+        }
+    }
+    .text-item {
+        height: 33%;
+        padding: 4% 0;
+        h3 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1.5rem;
+
+           @include sp(){
+            width: 90%;
+            margin: 0 auto;
+           }
+        }
+    }
+}
+// aboutセクションおわり
+
+// contactセクションはじめ
+.page-contact {
+    background: url(../images/back-visual2.jpg);
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: lighten;
+    background-size: cover;
+}
+.contact-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 0;
+    @include sp() {
+        padding: 50px 0 0 0;
+    }
+}
+.contact-text {
+    text-align: center;
+    padding: 0 11%;
+}
+.contact-form {
+    padding: 50px 0;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    p {
+        padding: 10px;
+    }
+    .contact-send {
+        text-align: center;
+        .btn {
+            padding: 20px 80px;
+            margin-top: 50px;
+            transition: all 0.5s;
+            &:hover {
+                background-color: $black;
+                a {
+                    color: $white;
+                }
+            }
+
+            @include sp() {
+                border: 1px solid $black;
+            }
+        }
+    }
+}
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    margin-top: 10px;
+    border: 1px solid #747474;
+    border-radius: 20px;
+}
+.form-textarea {
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    border: 1px solid #747474;
+    border-radius: 20px;
+}
+// contactセクションおわり
+
+// フッターはじめ
+.footer {
+    font-size: 1.1rem;
+    background-color: $main-color;
+}
+.footer-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+}
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    .nav-item {
+        margin-left: 15px;
+    }
+}
+.copyright {
+    padding-top: 10px;
+}
+// フッターおわり

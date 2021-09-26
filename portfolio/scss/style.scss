@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+// メディアクエリ
+$tb: 1025px;
+
+@mixin tb {
+    @media (max-width: ($tb)) {
+        @content;
+    }
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.home {
+    background-color: whitesmoke;
+}
+
+.home-content {
+    font-family: "Bonheur Royale", cursive;
+    text-align: center;
+    .title {
+        font-size: 80px;
+        font-weight: 700;
+        padding-top: 30px;
+        @include tb() {
+            font-size: 120px;
+            padding-top: 100px;
+        }
+    }
+    .title-2 {
+        font-size: 100px;
+        width: 60%;
+        margin: 0 auto 50px;
+        @include tb() {
+            font-size: 130px;
+            padding-top: 40px;
+        }
+    }
+
+    .portfolio {
+        display: flex;
+        font-size: 20px;
+        padding: 50px 0 120px 0;
+
+        @include tb() {
+            display: block;
+            height: auto;
+        }
+        .item {
+            width: 45%;
+            margin: 0 auto;
+            @include tb() {
+                width: 100%;
+                &:last-child {
+                    padding: 80px 0;
+                    width: 80%;
+                }
+            }
+        }
+        
+        .ravek-text{
+            font-family: Futura;
+            font-weight: 700;
+            font-size: 70px;
+            color:  #64629d;
+        }
+        .reknit-text{
+            font-family: 'Patrick Hand', cursive;
+            font-size: 90px;
+        }
+        p {
+            font-size: 20px;
+            font-family: "Noto Sans JP", sans-serif;
+            @include tb() {
+                font-size: 30px;
+            }
+        }
+        img {
+            border-radius: 40%;
+            @include tb() {
+                width: 80%;
+            }
+        }
+    }
+    .reknit-img {
+        width: 450px;
+        margin: 0 auto;
+        @include tb() {
+            width: 100%;
+            padding-top: 30px;
+        }
+    }
+}
